@@ -22,6 +22,6 @@ val nutriDF=hiveCtx.sql(s"select ${getColumnList} from NutritionData.Nutrition_P
 //Use Case 1: Average of each Question’s "Data_Value" by year for all age groups 
 val avgByAgeGroup=nutriDF.filter(!(nutriDF("question").contains("Question"))).groupBy(nutriDF("question"),nutriDF("yearstart"),nutriDF("age_in_months")).avg(nutriDF("data_value").toString())
 avgByAgeGroup.registerTempTable("Tempavgdatavaluebyage") //Storing the dataframe into temporary table
-hiveCtx.sql("insert into table NutritionData.case_1_datavalue_byage select * from Tempavgdatavaluebyage") //inserting into Main table
+hiveCtx.sql("insert into table NutritionData.datavalue_byage select * from Tempavgdatavaluebyage") //inserting into Main table
 }
 }
