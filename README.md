@@ -83,11 +83,15 @@ On Unix server:
     We can open the file and run command one by one command on hive.
 
 4) Download and copy the following files using winscp (if files downloaded on windows machine) under \<home\>/MSDNutrition from github:
-a) columnlist.txt ##Master column list of Nutrition data
-b) nutridata.sh ##script to load and generate visualization dashboard
-c) nutrition_byage_header.txt ## header file required for visualization dasboard
-d) nutrition_bygender_header.txt ##header file required for visualization dashboard
-e) nutrition_trailer.txt ## trailer file required for visualization dashboard
+    a) columnlist.txt ##Master column list of Nutrition data
+    
+    b) nutridata.sh ##script to load and generate visualization dashboard
+    
+    c) nutrition_byage_header.txt ## header file required for visualization dasboard
+    
+    d) nutrition_bygender_header.txt ##header file required for visualization dashboard
+    
+    e) nutrition_trailer.txt ## trailer file required for visualization dashboard
 
 5) Download and Copy the code jars from github using winscp (if files downloaded on windows machine)to folder \<home\>/MSDNutrition/codejars. Filenames are below:
 
