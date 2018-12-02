@@ -75,9 +75,9 @@ On Unix server:
     
     b) hadoop fs -put -f \<home\>/MSDNutrition/data/input/Nutrition__Physical_Activity__and_Obesity_-_Women__Infant__and_Child.csv <hdfs_location>/NutritionData/Nutrition_Physical_Activity/ 
 
-3) Download the file create_table.txt from github under \<home\>/MSDNutrition and run the below command through unix server
+3) Download the file create_table.hql from github under \<home\>/MSDNutrition and run the below command through unix server
 
-    Note : Open the create_table.txt file and change the <hdfs_location> to your cluster HDFS location
+    Note : Open the create_table.hql file and change the <hdfs_location> to your cluster HDFS location
 
         hive -f "<home>/MSDNutrition/create_table.hql"
                 Or
