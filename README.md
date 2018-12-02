@@ -46,6 +46,7 @@ mkdir -p <home>/MSDNutrition/codejars [example: mkdir -p /home/shubham/MSDNutrit
 mkdir -p <home>/MSDNutrition/data [example: mkdir -p /home/shubham/MSDNutrition/data] 
 
 ######NOTE :: Once you download the files inside <home>/MSDNutrition , run below command first:####
+    
 cd  <home>/MSDNutrition
     find . -type f -print0 | xargs -0 dos2unix   ### this commmand will converrt the files in unix format.
     
@@ -70,10 +71,9 @@ On Unix server:
 Note : Open the create_table.txt file and change the <hdfs_location> to your cluster HDFS location
 
 hive -f "<home>/MSDNutrition/create_table.hql"
-                OR
+                Or
 
 We can open the file and run command one by one command on hive.
-
 
 4) Download and copy the following files using winscp (if files downloaded on windows machine) under <home>/MSDNutrition from github:
 a) columnlist.txt ##Master column list of Nutrition data
