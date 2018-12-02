@@ -116,7 +116,7 @@ spark-submit --class nutritionbygender.datavaluebygender <home>/MSDNutrition/cod
 
 ##################### Configure Maven for the project: ####################
 
-1) Please refer attached msd_maven.doc and follow the steps 
+1) Please refer attached msd_maven.docx and follow the steps 
   
 ##################Visuaization Dasboard Screenshot########################
 
