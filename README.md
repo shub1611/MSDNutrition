@@ -15,12 +15,12 @@ to HDFS and Hive.
 6. Check-in the solution in GitHub.
 
 #############################################################################################################################
-Files attched in github:
-1)MSDNutrition.rar -- contains full package that is required to implement two use cases.
-2) 
+
+NOTE ::
+msd_codejars are the compliled jars but you need to add maven dependencies , if you plan to run the jars . For use case scala code ,please refer attached msdnutritionbyage.txt and msdnutritionbygender.txt file and then make maven project ann run the code. 
 
 
-
+#############################################################################################################################
 
 
 Info:
