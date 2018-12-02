@@ -28,7 +28,8 @@ Download ***msdnutrition.rar*** and extract the files and import **msdnutritionb
 #############################################################################################################################
 
 
-Info:
+**Info:**
+
 The below code is tested on Hortonsandbox with Spark Version 1.6.3 and developed on Scala IDE (Scala IDE build of Eclipse SDK :: Build id: 4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe) and build using Maven,
 
 Spark Version: 1.6.3
@@ -37,14 +38,14 @@ Spark-Sql: 1.6.3
 
 Spark-core: 1.6.3
 
-Assumptions Considered:
+***Assumptions Considered:***
 
 1) Downloaded the data file as is to windows machine and pushed to unix local server using winscp .
 2) Above two use cases are considered as separate requirement.
 3) I have considered the age(in months) as string column in the data feed.
 4) age(in months) field had blank values in data provided, is considered as it is for calculations. 
 
-Steps::
+***Steps::***
 
 1) Login to unix sever using Putty and create the following directory to copy the data and use case related jar :
 
