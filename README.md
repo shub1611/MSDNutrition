@@ -43,9 +43,9 @@ Steps::
 
     mkdir -p \<home\>/MSDNutrition  ##[example: mkdir -p /home/shubham/MSDNutrition]
     
-    mkdir -p <home>/MSDNutrition/codejars ##[example: mkdir -p /home/shubham/MSDNutrition/codejars]
+    mkdir -p \<home\>/MSDNutrition/codejars ##[example: mkdir -p /home/shubham/MSDNutrition/codejars]
     
-    mkdir -p <home>/MSDNutrition/data ##[example: mkdir -p /home/shubham/MSDNutrition/data] 
+    mkdir -p \<home\>/MSDNutrition/data ##[example: mkdir -p /home/shubham/MSDNutrition/data] 
 
 ######NOTE :: Once you download the files inside <home>/MSDNutrition , run below command first:####
     
@@ -57,10 +57,13 @@ Steps::
 
 2) Download data and move to unix local system using WinSCP or we can also wget command to download the data directly (if no security enabled in unix server) 
 On Unix server:
+
     cd <home>/MSDNutrition/data
+    
     wget https://chronicdata.cdc.gov/views/735e-byxc/rows.csv?accessType=DOWNLOAD
  
     NOTE : If data copied through wget command , then the file name made to be used [hadoop fs -put] in command to push the data on hdfs location
+    
     hadoop fs -put <filename> <hdfs_location>/NutritionData/Nutrition_Physical_Activity/
  
                                         OR
@@ -69,23 +72,23 @@ On Unix server:
     a) hadoop fs -mkdir -p <hdfs_location>/NutritionData/Nutrition_Physical_Activity/
     b) hadoop fs -put -f <home>/MSDNutrition/data/input/Nutrition__Physical_Activity__and_Obesity_-_Women__Infant__and_Child.csv <hdfs_location>/NutritionData/Nutrition_Physical_Activity/ 
 
-3) Download the file create_table.txt from github under <home>/MSDNutrition and run the below command through unix server
+3) Download the file create_table.txt from github under \<home\>/MSDNutrition and run the below command through unix server
 
-Note : Open the create_table.txt file and change the <hdfs_location> to your cluster HDFS location
+    Note : Open the create_table.txt file and change the <hdfs_location> to your cluster HDFS location
 
-hive -f "<home>/MSDNutrition/create_table.hql"
+        hive -f "<home>/MSDNutrition/create_table.hql"
                 Or
 
-We can open the file and run command one by one command on hive.
+    We can open the file and run command one by one command on hive.
 
-4) Download and copy the following files using winscp (if files downloaded on windows machine) under <home>/MSDNutrition from github:
+4) Download and copy the following files using winscp (if files downloaded on windows machine) under \<home\>/MSDNutrition from github:
 a) columnlist.txt ##Master column list of Nutrition data
 b) nutridata.sh ##script to load and generate visualization dashboard
 c) nutrition_byage_header.txt ## header file required for visualization dasboard
 d) nutrition_bygender_header.txt ##header file required for visualization dashboard
 e) nutrition_trailer.txt ## trailer file required for visualization dashboard
 
-5) Download and Copy the code jars from github using winscp (if files downloaded on windows machine)to folder <home>/MSDNutrition/codejars. Filenames are below:
+5) Download and Copy the code jars from github using winscp (if files downloaded on windows machine)to folder \<home\>/MSDNutrition/codejars. Filenames are below:
 
 Note : Below jars are created, compiled and tested on Spark Version 1.6.3
 
@@ -104,13 +107,14 @@ b) datavaluebygender.jar
 NOTE : export below varible in .profile of application id :
 1) cd ~ 
 2) Open the .profile then add export HOMEPATH=<home> 
-Example: vi .profile 
-[Press Esc then i] 
-export HOMEPATH=/home/shubham 
-to save the content [Esc + :w +:q]	
+    Example: vi .profile 
+    [Press Esc then i] 
+    export HOMEPATH=/home/shubham 
+    to save the content [Esc + :w +:q]	
 
 ##To excute the command through shell script
-1)cd <home>/MSDNutrition/
+
+1) cd <home>/MSDNutrition/
 2) sh nutridata.sh <age/gender> [example : sh nutridata.sh age ]
 
 7) Command to excute the use cases separately:
