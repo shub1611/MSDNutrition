@@ -48,6 +48,7 @@ mkdir -p <home>/MSDNutrition/data [example: mkdir -p /home/shubham/MSDNutrition/
 ######NOTE :: Once you download the files inside <home>/MSDNutrition , run below command first:####
 cd  <home>/MSDNutrition
     find . -type f -print0 | xargs -0 dos2unix   ### this commmand will converrt the files in unix format.
+    
     chmod -R 775 *
 
 2) Download data and move to unix local system using WinSCP or we can also wget command to download the data directly (if no security enabled in unix server) 
