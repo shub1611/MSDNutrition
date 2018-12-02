@@ -27,7 +27,9 @@ Info:
 The below code is tested on Hortonsandbox with Spark Version 1.6.3 and developed on Scala IDE (Scala IDE build of Eclipse SDK :: Build id: 4.7.0-vfinal-2017-09-29T14:34:02Z-Typesafe) and build using Maven,
 
 Spark Version: 1.6.3
+
 Spark-Sql: 1.6.3
+
 Spark-core: 1.6.3
 
 Assumptions Considered:
@@ -83,6 +85,7 @@ On Unix server:
     We can open the file and run command one by one command on hive.
 
 4) Download and copy the following files using winscp (if files downloaded on windows machine) under \<home\>/MSDNutrition from github:
+    
     a) columnlist.txt ##Master column list of Nutrition data
     
     b) nutridata.sh ##script to load and generate visualization dashboard
@@ -95,13 +98,15 @@ On Unix server:
 
 5) Download and Copy the code jars from github using winscp (if files downloaded on windows machine)to folder \<home\>/MSDNutrition/codejars. Filenames are below:
 
-Note : Below jars are created, compiled and tested on Spark Version 1.6.3
+    Note : Below jars are created, compiled and tested on Spark Version 1.6.3
 
-a) datavaluebyage.jar
-b) datavaluebygender.jar
+    a) datavaluebyage.jar
+
+    b) datavaluebygender.jar
 
 ###On Unix server
-    cd  <home>/MSDNutrition
+    
+    cd  \<home\>/MSDNutrition
     
     find . -type f -print0 | xargs -0 dos2unix
     
@@ -110,19 +115,27 @@ b) datavaluebygender.jar
 
 6) I have tested the use cases using shell script which will create visual dashboard and sent as an email to recipient (Note: Mail client should be configured). If mail client is not configured . Please ignore this step:
 NOTE : export below varible in .profile of application id :
+
 1) cd ~ 
+
 2) Open the .profile then add export HOMEPATH=<home> 
+    
     Example: vi .profile 
+    
     [Press Esc then i] 
+    
     export HOMEPATH=/home/shubham 
+    
     to save the content [Esc + :w +:q]	
 
 ##To excute the command through shell script
 
-1) cd <home>/MSDNutrition/
-2) sh nutridata.sh <age/gender> [example : sh nutridata.sh age ]
+1) cd \<home\>/MSDNutrition/
+
+2) sh nutridata.sh \<age/gender\> [example : sh nutridata.sh age ]
 
 7) Command to excute the use cases separately:
+
 ## Command for UseCase 1: Average of each Question’s "Data_Value" by year for all age groups##
 spark-submit --class nutritionbygender.datavaluebyage <home>/MSDNutrition/codejars/datavaluebyage.jar <home>/MSDNutrition/columnlist.txt
 
