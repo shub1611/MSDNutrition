@@ -47,7 +47,8 @@ mkdir -p <home>/MSDNutrition/data [example: mkdir -p /home/shubham/MSDNutrition/
 
 ######NOTE :: Once you download the files inside <home>/MSDNutrition , run below command first:####
     
-cd  <home>/MSDNutrition
+    cd  <home>/MSDNutrition
+    
     find . -type f -print0 | xargs -0 dos2unix   ### this commmand will converrt the files in unix format.
     
     chmod -R 775 *
@@ -90,8 +91,10 @@ a) datavaluebyage.jar
 b) datavaluebygender.jar
 
 ###On Unix server
-cd  <home>/MSDNutrition
+    cd  <home>/MSDNutrition
+    
     find . -type f -print0 | xargs -0 dos2unix
+    
     chmod -R 775 *
 
 
