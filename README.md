@@ -6,7 +6,6 @@ To demonstrate skillset of ETL, Hive and Spark. Please develop automation pipeli
 
 1. Setup Hadoop Stack (Ex. Use Scripts like - Ansible, Bash etc to setup Hadoop Stack or Download Hortonworks Sandbox).
 2. Develop scripts/programs to download and ingest data from < https://chronicdata.cdc.gov/views/735e-byxc/rows.csv?accessType=DOWNLOAD>
-
 to HDFS and Hive. 
 3. Develop scripts/programs to calculate the following using Spark, and store the results into separate Hive tables:
 - Average of each Question’s "Data_Value" by year for all age groups
