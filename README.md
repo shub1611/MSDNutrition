@@ -41,9 +41,11 @@ Steps::
 
 1) Login to unix sever using Putty and create the following directory to copy the data and use case related jar :
 
-mkdir -p <home>/MSDNutrition [example: mkdir -p /home/shubham/MSDNutrition]
-mkdir -p <home>/MSDNutrition/codejars [example: mkdir -p /home/shubham/MSDNutrition/codejars]
-mkdir -p <home>/MSDNutrition/data [example: mkdir -p /home/shubham/MSDNutrition/data] 
+    mkdir -p <home>/MSDNutrition  ##[example: mkdir -p /home/shubham/MSDNutrition]
+    
+    mkdir -p <home>/MSDNutrition/codejars ##[example: mkdir -p /home/shubham/MSDNutrition/codejars]
+    
+    mkdir -p <home>/MSDNutrition/data ##[example: mkdir -p /home/shubham/MSDNutrition/data] 
 
 ######NOTE :: Once you download the files inside <home>/MSDNutrition , run below command first:####
     
