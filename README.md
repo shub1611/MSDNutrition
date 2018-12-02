@@ -106,7 +106,7 @@ On Unix server:
 
 ###On Unix server
     
-    cd  \<home\>/MSDNutrition
+    cd  <home>/MSDNutrition
     
     find . -type f -print0 | xargs -0 dos2unix
     
@@ -137,10 +137,10 @@ NOTE : export below varible in .profile of application id :
 7) Command to excute the use cases separately:
 
 ## Command for UseCase 1: Average of each Question’s "Data_Value" by year for all age groups##
-spark-submit --class nutritionbygender.datavaluebyage <home>/MSDNutrition/codejars/datavaluebyage.jar <home>/MSDNutrition/columnlist.txt
+spark-submit --class nutritionbygender.datavaluebyage \<home\>/MSDNutrition/codejars/datavaluebyage.jar \<home\>/MSDNutrition/columnlist.txt
 
 ## Command for UseCase 2: Average of each Question’s "Data_Value" by year for female only ##
-spark-submit --class nutritionbygender.datavaluebygender <home>/MSDNutrition/codejars/datavaluebygender.jar <home>/MSDNutrition/columnlist.txt
+spark-submit --class nutritionbygender.datavaluebygender \<home\>/MSDNutrition/codejars/datavaluebygender.jar \<home\>/MSDNutrition/columnlist.txt
 
 ##################### Configure Maven for the project: ####################
 
