@@ -1,0 +1,30 @@
+package nutritionbygender;
+import org.apache.spark.SparkContext;
+import org.apache.spark.sql.SQLContext;
+import org.apache.spark.sql.hive.HiveContext;
+
+import org.apache.spark.SparkConf
+import org.apache.spark.sql.hive.HiveContext
+import scala.io.Source;
+import org.apache.spark.sql.functions.avg
+import org.apache.spark.sql.hive.HiveContext
+
+
+object datavaluebygender {
+
+
+def main(args:Array[String]){
+val conf = new SparkConf().setAppName("NutritionDataByAge") //import necessary configs to communicate with the driver program. 
+val sc = new SparkContext(conf) //Initialization of SparkContext to communicate with the Spark 
+val hiveCtx= new HiveContext(sc) //HiveContext to connect to hive service on Spark
+val filename=args(0) //reading Command line arguments (in this case reading column list for Master Table
+val getColumnList=Source.fromFile(filename).getLines().mkString
+//*********Processing Starts****************
+//Create a dataframe for nutrition data(Master Dataset)
+val nutriDF=hiveCtx.sql(s"select ${getColumnList} from NutritionData.Nutrition_Physical_Activity")
+//Use Case 1: Average of each Question’s "Data_Value" by year for female only 
+val avgByGender=nutriDF.filter(!(nutriDF("question").contains("Question")) && nutriDF("gender").contains("Female")).groupBy(nutriDF("question"),nutriDF("yearstart")).avg(nutriDF("data_value").toString())
+avgByGender.registerTempTable("Tempavgdatavaluebygender") //Storing the dataframe into temporary table
+hiveCtx.sql("insert into table NutritionData.datavalue_bygender select * from Tempavgdatavaluebygender") //inserting into Main table
+}
+}
