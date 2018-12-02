@@ -17,7 +17,7 @@ to HDFS and Hive.
 #############################################################################################################################
 
 NOTE ::
-Download ***msd_codejars.rar*** and extract are the compliled jars for the usecases but need to add maven dependencies , if plan to run the jars as is. For usecase,please refer attached  ***msdnutritionbyage.txt and msdnutritionbygender.txt*** file and then import them into Scala IDE and make them as maven project to add the required dependencies(to add dependencies , please refer the attached ***msd_maven.docx***)
+Download ***msd_codejars.rar*** and extract are the compliled jars for the usecases but need to add maven dependencies , if plan to run the jars as is. If not ,for usecases,please refer attached  ***msdnutritionbyage.txt and msdnutritionbygender.txt*** file and then import them into Scala IDE and make them as maven project to add the required dependencies(to add dependencies , please refer the attached ***msd_maven.docx***)
 
 
 #############################################################################################################################
