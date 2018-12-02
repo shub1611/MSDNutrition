@@ -1,0 +1,18 @@
+<html>
+<head>
+<STYLE TYPE="text/css">
+<!--
+TD{font-family: Arial; font-size: 10pt; color:MidnightBlue;}
+TH{font-family: Arial; font-size: 10pt;text-align: left;background-color: MidnightBlue ;color:white;}
+body{font-family: Arial; font-size: 10pt; color:MidnightBlue ; } 
+
+--->
+</STYLE>
+
+</head>
+<body>
+<center color:MidnightBlue;> <br>Note: This is an auto generated email. Please do not reply. You can contact MSD Nutrition Team for further details.<br></center>
+
+<center color:MidnightBlue;> <b><br><u>Visualization Report</u><br><br></b></center>
+
+<table border="3"><tr><th>Question</th><th>Year Start</th><th>Age In Months</th><th>Average(data_value)</th></tr>
