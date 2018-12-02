@@ -70,6 +70,7 @@ On Unix server:
     Copy the data using winscp from windows machine under <home>/MSDNutrition/data and run below command to push the data on hdfs:
 
     a) hadoop fs -mkdir -p \<hdfs_location\>/NutritionData/Nutrition_Physical_Activity/
+    
     b) hadoop fs -put -f \<home\>/MSDNutrition/data/input/Nutrition__Physical_Activity__and_Obesity_-_Women__Infant__and_Child.csv <hdfs_location>/NutritionData/Nutrition_Physical_Activity/ 
 
 3) Download the file create_table.txt from github under \<home\>/MSDNutrition and run the below command through unix server
