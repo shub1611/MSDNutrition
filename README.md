@@ -120,5 +120,5 @@ spark-submit --class nutritionbygender.datavaluebygender <home>/MSDNutrition/cod
   
 ##################Visuaization Dasboard Screenshot########################
 
-1) Please refer attached msd_visualzation_dashboarad.doc
+1) Please refer attached images 
 
